@@ -13,7 +13,7 @@ function Home() {
           <div className='flex item-center'>
             <img src={Img} alt="Vegetable Image" className='h-[450px]' />
           </div>
-          <h1 className=" text-[3rem]! font-bold mt-8 text-#C5D89D text-center bg-#C5D89D">
+          <h1 className=" text-[3rem]! font-bold mt-8 text-[#AEB784] text-center ">
             One platform for all your healthy food needs.
           </h1>
         </div>
