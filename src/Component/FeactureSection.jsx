@@ -1,10 +1,11 @@
 import IconFreshness from './../assets/Feactures/fresh.png';
 import IconVegitable from './../assets/Feactures/vegetable.png';
 import IconDelivery from './../assets/Feactures/food-delivery.png';
+import IconFarmer from './../assets/Feactures/farmer.png';
 
 function FeatureSection({ title, description, imgsrc }) {
   return (
-    <div className="bg-[#FCFBF5] px-6 py-5 w-[300px] h-[260px] text-center  rounded-3xl shadow-md  flex flex-col items-center justify-start cursor-pointer hover:shadow-lg transition-shadow duration-300">
+    <div className="bg-[#FCFBF5] px-6 py-5 w-[300px] h-[260px] text-center rounded-3xl shadow-md flex flex-col items-center justify-start cursor-pointer hover:shadow-lg transition-shadow duration-300">
       <img src={imgsrc} alt={title} className="h-20 mx-auto" />
       <h3 className="text-2xl text-[#9CAB84] font-semibold mt-3">{title}</h3>
       <p className="mt-3 text-[#b4c78b]">{description}</p>
@@ -27,33 +28,33 @@ const FEATURES_CONFIG = [
     title: "Convenient Delivery",
     description: "Enjoy the convenience of having fresh vegetables delivered right to your doorstep, saving you time and effort.",
     imgsrc: IconDelivery
+  },
+  {
+    title: "Sutible Farming",
+    description: "We are committed to promoting sustainable farming practices that protect the environment and support local communities.",
+    imgsrc: IconFarmer
   }
 ];
 
+function FeatureCard() {
+  return (
+    <div className="w-full px-6 py-10">
+      <p className="w-full text-[2rem] md:text-[2rem] text-[#AEB784] mt-[2rem] mb-[3rem] text-center">
+        Why You Should Choose Us
+      </p>
 
- function FeatureCard() {
-    return(
-        <>
-        <div>
-        <p className="w-full text-[2rem] md:text-[2rem] text-[#AEB784] mt-[2rem] mb-[3rem] text-center">
-              Why You Should Choose Us
-            </p>
-    
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
-              {FEATURES_CONFIG.map((feat, index) => {
-                const { title, description, imgsrc } = feat;
-                return (
-                  <FeatureSection
-                    key={index}
-                    title={title}
-                    description={description}
-                    imgsrc={imgsrc}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </>
-    )
- }
-     export default FeatureCard;
+      <div className="flex flex-wrap justify-center gap-8 mt-10">
+        {FEATURES_CONFIG.map((feat, index) => (
+          <FeatureSection
+            key={index}
+            title={feat.title}
+            description={feat.description}
+            imgsrc={feat.imgsrc}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default FeatureCard;
