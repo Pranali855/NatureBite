@@ -43,7 +43,7 @@ function Home() {
 
         </div>
 
-        <p className="text-[2rem] md:text-[1.5rem] text-[#AEB784] mt-[1.5rem]  nb-0 mb-[3rem] text-center justify-center">
+        <p className="text-[3rem] md:text-[1.5rem] text-[#AEB784] mt-[1.5rem]  nb-0 mb-[3rem] text-center justify-center">
           Why You Should Choose Us
         </p>
 
