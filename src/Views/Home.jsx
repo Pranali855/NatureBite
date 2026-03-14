@@ -34,16 +34,16 @@ function Home() {
         <div className="flex flex-col md:flex-row items-center justify-start gap-15 mt-10">
 
           <div className="flex items-center">
-            <img src={Img} alt="Vegetable Image" className="h-[450px] w-auto object-contain justify-center"  />
+            <img src={Img} alt="Vegetable Image" className="h-[450px] w-auto object-contain justify-center" />
           </div>
 
-          <h1 className="text-[3rem] font-bold mt-8 text-[#AEB784] md: text[20px] text-center">
+          <h1 className="text-[4rem] font-bold mt-8 text-[#AEB784] md: text[40px] text-center">
             One platform for all your healthy food needs.
           </h1>
 
         </div>
 
-        <p className="text-[3rem] md:text-[1.5rem] text-[#AEB784] mt-[1.5rem]  nb-0 mb-[3rem] text-center justify-center">
+        <p className="w-full text-[2rem] md:text-[2rem] text-[#AEB784] mt-[2rem] mb-[3rem] text-center">
           Why You Should Choose Us
         </p>
 
@@ -51,12 +51,12 @@ function Home() {
           {FEATURES_CONFIG.map((feat, index) => {
             const { title, description, imgsrc } = feat;
             return (
-              <FeatureSection 
-              key={index}
-              title={title}
-               description={description} 
-               imgsrc={imgsrc} 
-               />
+              <FeatureSection
+                key={index}
+                title={title}
+                description={description}
+                imgsrc={imgsrc}
+              />
             );
           })}
         </div>
