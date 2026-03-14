@@ -1,3 +1,7 @@
+import IconFreshness from './../assets/Feactures/fresh.png';
+import IconVegitable from './../assets/Feactures/vegetable.png';
+import IconDelivery from './../assets/Feactures/food-delivery.png';
+
 function FeatureSection({ title, description, imgsrc }) {
   return (
     <div className="bg-[#FCFBF5] px-6 py-5 w-[300px] h-[260px] text-center  rounded-3xl shadow-md  flex flex-col items-center justify-start cursor-pointer hover:shadow-lg transition-shadow duration-300">
@@ -8,4 +12,48 @@ function FeatureSection({ title, description, imgsrc }) {
   );
 }
 
-export default FeatureSection;
+const FEATURES_CONFIG = [
+  {
+    title: "Fresh and Organic",
+    description: "We source our vegetables from local farms to ensure freshness and support sustainable agriculture.",
+    imgsrc: IconFreshness
+  },
+  {
+    title: "Wide Variety",
+    description: "Our platform offers a diverse selection of vegetables, catering to different tastes and dietary preferences.",
+    imgsrc: IconVegitable
+  },
+  {
+    title: "Convenient Delivery",
+    description: "Enjoy the convenience of having fresh vegetables delivered right to your doorstep, saving you time and effort.",
+    imgsrc: IconDelivery
+  }
+];
+
+
+ function FeatureCard() {
+    return(
+        <>
+        <div>
+        <p className="w-full text-[2rem] md:text-[2rem] text-[#AEB784] mt-[2rem] mb-[3rem] text-center">
+              Why You Should Choose Us
+            </p>
+    
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+              {FEATURES_CONFIG.map((feat, index) => {
+                const { title, description, imgsrc } = feat;
+                return (
+                  <FeatureSection
+                    key={index}
+                    title={title}
+                    description={description}
+                    imgsrc={imgsrc}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </>
+    )
+ }
+     export default FeatureCard;
