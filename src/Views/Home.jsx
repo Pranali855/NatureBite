@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../Component/Navbar';
 import Footer from '../Component/Footer';
 import Img from './../assets/Feactures/bg-vegitable.png';
-import FeactureSection from '../Component/FeactureSection'; 
+import FeactureSection from '../Component/FeactureSection';
 import Button from './../Component/Button';
 
 function Home() {
@@ -25,8 +25,10 @@ function Home() {
               One platform for all your healthy food needs.
             </h1>
 
-            <div className="mt-8">
-              <Button title="Call Us" />
+            <div className="mt-8 flex justify-center gap-4 flex-row">
+              <Button title="Explore Now" varient="primary" size="medium" />
+              <Button title="Call us" varient="primary" size="medium" />
+
             </div>
           </div>
         </div>
