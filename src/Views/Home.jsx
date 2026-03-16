@@ -26,7 +26,12 @@ function Home() {
             </h1>
 
             <div className="mt-8 flex justify-center gap-4 flex-row">
-              <Button title="Explore Now" varient="primary" size="medium" />
+              <Button title="Explore Now" varient="primary" size="medium" 
+              onClick={() =>{
+                window.location.href="/vegetables"
+               navigate['/vegetables']
+              }
+              }/>
               <Button title="Call us" varient="primary" size="medium" />
 
             </div>
