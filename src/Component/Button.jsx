@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BUTTON_VARIANTS = {
-  primary: 'bg-[#AEB784] text-white hover:bg-[#9CAB84] gap-9px',
+  primary: 'bg-[#AEB784] text-white hover:bg-[#9CAB84]',
   secondary: 'bg-[#AEB784] text-white hover:bg-[#9CAB84]',
   Tertiary: 'bg-transparent border border-[#AEB784] text-[#AEB784] hover:bg-[#AEB784] hover:text-white',
 };
